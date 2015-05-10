@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+    h1.
+         #{title}
+    ul
+        - each ngo, i in ngos
+            li
+                = ngo.name
+                = ngo.country
+                = ngo.establishedOn
+                = ngo.website
+                = ngo.workingArea
+                = ngo._id
+                p

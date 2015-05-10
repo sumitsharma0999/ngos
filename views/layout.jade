@@ -1,0 +1,22 @@
+include mixins
+
+doctype
+html( lang="en" )
+    head
+        title Bring a change
+        meta( charset='utf-8' )
+        meta( http-equiv='X-UA-Compatible', content='IE=edge' )
+        meta( name='viewport', content='width=device-width, initial-scale=1.0' )
+        meta( name='description', content='Baking Bootstrap Snippets with Jade' )
+        //- Bootswatch Theme
+        link(href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css", rel="stylesheet")
+ 
+    body(style="padding-bottom:10rem;")
+        .container
+            +nav("Care", "dropdown_menu")
+                +nav_item( "index.html") Home
+                +nav_item( "about.html" ) About
+                +nav_item( "contact.html" ) Contact
+            block content
+        script( src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' )
+        script( src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js' )

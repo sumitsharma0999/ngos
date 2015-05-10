@@ -1,0 +1,33 @@
+extends ../layout
+
+block content
+    form(name="addNgo", class="form-horizontal", method="post", action="/ngos")
+        fieldset
+            legend #{title}
+            div.form-group
+                label.control-label(for="inputName", class="col-sm-2") Name 
+                div.col-sm-5
+                    input#inputName(type="text", placeholder="e.g. Parivartan", name="name" class="form-control")
+            div.form-group
+                label.control-label(for="inputCountry", class="col-sm-2") Country 
+                div.col-sm-5
+                    input#inputCountry(type="text", placeholder="e.g. India", name="Country" class="form-control")
+                    p Comma separated list of countries, please write 'WorldWide'' if you operate world wide
+            div.form-group
+                label.control-label(for="inputestablishedOn", class="col-sm-2") When did you start? 
+                div.col-sm-5
+                    input#inputestablishedOn(type="month", placeholder="e.g. May 1989", name="establishedOn" class="form-control")
+                    //input#inputestablishedOnMonth(type="month", name="establishedOn" class="form-control")
+            div.form-group
+                label.control-label(for="webinputWebsite", class="col-sm-2") Official website: 
+                div.col-sm-5
+                    input#inputWebsite(type="text", placeholder="e.g. www.parivartan.org", name="website" class="form-control")
+            div.form-group
+                label.control-label(for="inputWorkingArea", class="col-sm-2") Area you work in 
+                div.col-sm-5
+                    input#inputWorkingArea(type="text", placeholder="e.g. Child Education", name="workingArea" class="form-control")
+                    
+            div.form-group
+             
+                div.col-sm-4.col-sm-offset-2        
+                    button#btnSubmit(type="submit" class="btn btn-primary") submit
